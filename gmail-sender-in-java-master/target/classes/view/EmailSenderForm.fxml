@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: rgba(255,255,255,0.51);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gmaisender.controller.EmailSenderController">
+    <children>
+        
+        <ImageView fitHeight="700.0" fitWidth="700.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/drivertab2.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="700.0" fitWidth="700.0" layoutX="5.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/drivertab2.png" />
+            </image>
+        </ImageView>
+
+
+        <Label layoutX="200.0" layoutY="14.0" text="Email Sender with Attachments" textFill="#000000">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+
+
+        <Label layoutX="20.0" layoutY="62.0" style="-fx-text-fill: black;" text="Recipients(comma-separated):">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtRecipients" layoutX="200.0" layoutY="60.0" prefHeight="25.0" prefWidth="450.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-width: 0 0 3 0;">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+
+
+        <Label layoutX="20.0" layoutY="108.0" style="-fx-text-fill: black;" text="Email Title:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtTitle" layoutX="200.0" layoutY="105.0" prefHeight="25.0" prefWidth="450.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-width: 0 0 3 0;">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+
+
+        <Label layoutX="20.0" layoutY="148.0" style="-fx-text-fill: black;" text="HTML Content:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="txtContent" layoutX="200.0" layoutY="145.0" prefHeight="100.0" prefWidth="450.0" style="-fx-background-color: #ffffff; -fx-border-color: blue; -fx-border-width: 1; -fx-text-fill: black;">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextArea>
+
+
+        <Button fx:id="btnAttachFiles" layoutX="200.0" layoutY="260.0" text="Attach Files" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-border-radius: 5px;" onAction="#attachFiles">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+
+        <Label layoutX="20.0" layoutY="300.0" style="-fx-text-fill: black;" text="Attachments:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <ListView fx:id="fileListView" layoutX="200.0" layoutY="300.0" prefWidth="450.0" prefHeight="100.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-width: 1;">
+        </ListView>
+
+
+        <ImageView fx:id="btnSend" fitHeight="59.0" fitWidth="52.0" layoutX="580.0" layoutY="420.0" onMouseClicked="#sendEmail" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/send3D.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

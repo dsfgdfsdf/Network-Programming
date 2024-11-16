@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgba(255,255,255,0.51);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gmaisender.controller.SenderFormController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="700.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/drivertab2.png" />
+         </image>
+      </ImageView>
+
+      <Label layoutX="20.0" layoutY="62.0" style="-fx-text-fill: black;" text="You gmail address :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="hypGmail" layoutX="161.0" layoutY="61.0" prefHeight="23.0" prefWidth="279.0" text="gmail" style="-fx-text-fill:  black" />
+      <TextArea fx:id="ariaMessage" layoutX="13.0" layoutY="178.0" prefHeight="151.0" prefWidth="579.0" style="-fx-background-color: #0015ff;" />
+      <TextField fx:id="txtGmail" layoutX="162.0" layoutY="92.0" prefHeight="25.0" prefWidth="279.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-width: 0 0 3 0;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="22.0" layoutY="108.0" style="-fx-text-fill: black;" text="Recover gmail">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="btnSend" fitHeight="59.0" fitWidth="52.0" layoutX="531.0" layoutY="341.0" onMouseClicked="#btnSendOnAction" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/send3D.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="200.0" layoutY="14.0" prefHeight="30.0" prefWidth="400.0" text="Sender g-mail page sending a message" textFill="#000000">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="147.0" text="Text Only" />
+      <TextField fx:id="txtTitle" layoutX="168.0" layoutY="143.0" prefHeight="25.0" prefWidth="267.0" />
+      <Label layoutX="115.0" layoutY="147.0" prefHeight="17.0" prefWidth="46.0" text="Title" />
+   </children>
+   <Button fx:id="btnGoToEmailSender" layoutX="20.0" layoutY="350.0" text="Go to Email Sender" onAction="#goToEmailSender" />
+</AnchorPane>

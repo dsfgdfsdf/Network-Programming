@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="187.0" prefWidth="452.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gmaisender.controller.HomeFormController">
+   <children>
+      <ImageView fitHeight="307.0" fitWidth="452.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/drivertab2.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtGmail" layoutX="40.0" layoutY="111.0" onKeyTyped="#txtGmailKeyTyped" prefHeight="40.0" prefWidth="302.0" style="-fx-background-color: white; -fx-border-width: 0 0 3 0; -fx-border-color: green;">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Label layoutX="40.0" layoutY="78.0" style="-fx-text-fill: black;" text="Enter user-gmail address :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="320.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/dashbiordBooking.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnNext" fitHeight="50.0" fitWidth="50.0" layoutX="365.0" layoutY="118.0" onMouseClicked="#btnNextOnAction" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/send2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="100.0" layoutY="4.0" style="-fx-text-fill: black;" text="Sender e-mail page">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="100.0" layoutY="210.0"  style="-fx-text-fill: black;" onAction="#hypClickOnAction" text="Developed by Barda Mukola 405 group" />
+   </children>
+</AnchorPane>
