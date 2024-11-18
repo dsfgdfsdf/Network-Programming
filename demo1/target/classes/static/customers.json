@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Іван Іваненко",
+    "phone": "+380123456789",
+    "address": "Київ, вул. Хрещатик, 1",
+    "photoUrl": "/images/image1.jpeg",
+    "orders": [
+      {
+        "id": 101,
+        "date": "2024-10-15",
+        "amount": 1500.50,
+        "paymentMethod": "Credit Card"
+      },
+      {
+        "id": 102,
+        "date": "2024-11-01",
+        "amount": 500.00,
+        "paymentMethod": "Cash"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Петро Петренко",
+    "phone": "+380987654321",
+    "address": "Одеса, вул. Дерибасівська, 10",
+    "photoUrl": "/images/image2.jpeg",
+    "orders": []
+  },
+  {
+    "id": 3,
+    "name": "Сергій Іванов",
+    "phone": "+38050394563",
+    "address": "Київ, вул. Шевченківська, 12",
+    "photoUrl": "/images/image3.jpeg",
+    "orders": [
+      {
+        "id": 103,
+        "date": "2024-10-15",
+        "amount": 1700.50,
+        "paymentMethod": "Credit Card"
+      },
+      {
+        "id": 104,
+        "date": "2024-11-01",
+        "amount": 300.00,
+        "paymentMethod": "Cash"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Олена Зимченко",
+    "phone": "+380984454555",
+    "address": "Одеса, вул. Дерибасівська, 50",
+    "photoUrl": "/images/image5.jpeg",
+    "orders": []
+  },
+  {
+    "id": 6,
+    "name": "Владислав Іванов",
+    "phone": "+38050394563",
+    "address": "Київ, вул. Хрещатик, 4",
+    "photoUrl": "/images/image3.jpeg",
+    "orders": [
+      {
+        "id": 105,
+        "date": "2024-10-15",
+        "amount": 1700.50,
+        "paymentMethod": "Credit Card"
+      },
+      {
+        "id": 106,
+        "date": "2024-11-01",
+        "amount": 1000.00,
+        "paymentMethod": "Cash"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Вадим Зимченко",
+    "phone": "+380507654555",
+    "address": "Вінниця, вул. Дерибасівська, 50",
+    "photoUrl": "/images/image5.jpeg",
+    "orders": []
+  }
+]
+
+
+

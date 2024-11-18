@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customers</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Customer List</h1>
+<a href="/upload">Upload JSON File</a>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Photo</th>
+        <th>Total Orders (Last Month)</th>
+    </tr>
+    <tr th:each="customer : ${customers}"
+        th:class="${customer.orders.size() == 0 ? 'no-orders' : ''}">
+        <td th:text="${customer.name}"></td>
+        <td th:text="${customer.phone}"></td>
+        <td th:text="${customer.address}"></td>
+        <td><img th:src="${customer.photoUrl}" alt="Photo" width="50" height="50" /></td>
+        <td th:text="${customer.totalOrdersLastMonth}"></td>
+    </tr>
+</table>
+</body>
+</html>
