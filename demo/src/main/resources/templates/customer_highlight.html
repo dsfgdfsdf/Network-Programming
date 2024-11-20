@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Список клієнтів</title>
+    <style>
+        .no-orders {
+            background-color: #ffcccc; /* Червоний фон */
+        }
+        .highlight-max {
+            background-color: #ccffcc; /* Зелений фон */
+        }
+    </style>
+</head>
+<body>
+<h1>Список клієнтів</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Ім'я</th>
+        <th>Телефон</th>
+        <th>Адреса</th>
+        <th>Фото</th>
+        <th>Сума замовлень за місяць</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customer : ${customers}"
+        th:class="${customer.noOrdersThisMonth} ? 'no-orders' : (customer.maxOrderCustomer} ? 'highlight-max' : '')">
+        <td th:text="${customer.name}"></td>
+        <td th:text="${customer.phone}"></td>
+        <td th:text="${customer.address}"></td>
+        <td>
+            <img th:src="${customer.photoUrl}" alt="Фото" width="50" height="50" />
+        </td>
+        <td th:text="${customer.monthlyOrderSum}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

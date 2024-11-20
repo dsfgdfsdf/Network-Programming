@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customers</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>List of customers</h1>
+
+<div>
+    <a href="/customer/upload" class="btn">Go to Upload JSON</a>
+</div>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Photo</th>
+        <th>Amount of orders per month</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customer : ${customers}"
+        th:class="${customer.noOrdersThisMonth} ? 'no-orders' : (customer.maxOrderCustomer ? 'highlight-max' : '')">
+        <td th:text="${customer.name}"></td>
+        <td th:text="${customer.phone}"></td>
+        <td th:text="${customer.address}"></td>
+        <td>
+            <img th:src="${customer.photoUrl}" alt="Photo" width="50" height="50" />
+        </td>
+        <td th:text="${customer.monthlyOrderSum}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

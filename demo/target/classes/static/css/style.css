@@ -1,0 +1,76 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #6a0dad, #ff0000); /* Фіолетовий -> Червоний */
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Текст білий для контрасту */
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: #000; /* Чорний текст у контейнері */
+}
+
+/* Стілі для повідомлень */
+.message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+/* Таблиці */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #fff;
+    color: #000; /* Чорний текст у таблиці */
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.highlight-max {
+    font-weight: bold;
+    color: green;
+}
+
+.no-orders {
+    color: red;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}

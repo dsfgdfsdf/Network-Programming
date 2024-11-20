@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Uploading a JSON</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Uploading a JSON file</h1>
+
+    <div>
+        <a href="/customer/html" class="btn">Return to the list of customers</a>
+    </div>
+    <form th:action="@{/customer/upload}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".json" required>
+        <button type="submit">Upload</button>
+    </form>
+    <div class="message" th:if="${message}" th:text="${message}"></div>
+</div>
+</body>
+</html>

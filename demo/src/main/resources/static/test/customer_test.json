@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Степан Яворський",
+    "phone": "+380123216789",
+    "address": "Київ, вул. Хрещатик, 5",
+    "photoUrl": "/images/ivan.jpg",
+    "orders": [
+      {
+        "orderDate": "2022-10-19",
+        "amount": 10000,
+        "paymentMethod": "Credit Card",
+        "customer": {
+          "id": 7
+        }
+      }
+    ]
+  }
+]
