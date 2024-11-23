@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Find Your Reservations</title>
+  <link rel="icon" type="image/png" href="/favicon-16x16.png">
+  <img src="/images/logo.png" alt="Hotel Logo" style="width: 150px; height: auto;">
+  <link rel="stylesheet" href="/Styles/styles.css">
+</head>
+<body>
+<h1>Find Your Reservations</h1>
+
+<!-- Guest name input form -->
+<form th:action="@{/reservations/by-name}" method="get">
+  <label for="guestName">Enter your name:</label>
+  <input type="text" id="guestName" name="guestName" required>
+  <button type="submit">Search</button>
+</form>
+
+<a href="/rooms">Back to Room List</a>
+</body>
+<footer style="margin-top: 20px; text-align: center;">
+  <p>Find us on GitHub:
+    <a href="https://github.com/dsfgdfsdf" target="_blank" style="text-decoration: none; color: blue;">Made Mukola Barda 405 Group</a>
+  </p>
+</footer>
+</html>

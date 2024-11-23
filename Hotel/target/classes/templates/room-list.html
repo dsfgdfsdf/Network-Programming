@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooms</title>
+    <link rel="icon" type="image/png" href="/favicon-16x16.png">
+    <img src="/images/logo.png" alt="Hotel Logo" style="width: 150px; height: auto;">
+    <link rel="stylesheet" href="/Styles/styles.css">
+</head>
+<body>
+<h1>Rooms in the Hotel</h1>
+<div class="message"
+     th:classappend="${messageType}"
+     th:text="${message}"
+     id="messageBox"></div>
+
+<!-- Form for filtering rooms by price -->
+<form method="get" action="/rooms" style="margin-bottom: 20px;">
+    <label for="minPrice">Min Price:</label>
+    <input type="number" step="0.01" id="minPrice" name="minPrice">
+
+    <label for="maxPrice">Max Price:</label>
+    <input type="number" step="0.01" id="maxPrice" name="maxPrice">
+
+    <button type="submit">Filter</button>
+</form>
+
+<!-- Table with numbers -->
+<table>
+    <thead>
+    <tr>
+        <th>Room Number</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Availability</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="room : ${rooms}">
+        <td th:text="${room.roomNumber}"></td>
+        <td th:text="${room.type}"></td>
+        <td th:text="${room.pricePerNight}"></td>
+        <td th:text="${room.isAvailable ? 'Available' : 'Not Available'}"></td>
+        <td>
+            <a th:href="@{/reservations/book(roomId=${room.id})}" th:if="${room.isAvailable}">Book</a>
+            <span th:if="${!room.isAvailable}">Not Available</span>
+        </td>
+    </tr>
+
+
+    <div style="margin-top: 20px;">
+        <button onclick="window.location.href='/reservations/search';" style="padding: 10px 20px; font-size: 16px;">Find Your Reservations</button>
+        <button onclick="window.location.href='/products';" style="padding: 10px 20px; font-size: 16px; margin-left: 10px;">Go to Products Page</button>
+    </div>
+
+
+
+    </tbody>
+</table>
+<script src="/js/scriptMasage.js"></script>
+
+</body>
+<button id="loadJsonButton" style="margin-top: 20px;">Load Rooms as JSON</button>
+<div id="jsonResult" style="margin-top: 20px; border: 1px solid #ddd; padding: 10px; display: none;">
+    <pre id="jsonData"></pre>
+</div>
+<script src="/js/scripts.js"></script>
+<footer style="margin-top: 1px; text-align: center;">
+    <p>Find us on GitHub:
+        <a href="https://github.com/dsfgdfsdf" target="_blank" style="text-decoration: none; color: blue;">Made Mukola Barda 405 Group</a>
+    </p>
+</footer>
+
+</html>
