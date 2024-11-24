@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Reservations</title>
+    <link rel="icon" type="image/png" href="/favicon-16x16.png">
+    <img src="/images/logo.png" alt="Hotel Logo" style="width: 150px; height: auto;">
+    <link rel="stylesheet" href="/Styles/styles.css">
+</head>
+<body>
+<h1>Reservations for <span th:text="${guestName}"></span></h1>
+
+<!-- Success or error message -->
+<div class="message"
+     th:classappend="${messageType}"
+     th:text="${message}"
+     id="messageBox"></div>
+
+<table>
+    <thead>
+    <tr>
+        <th>Room Number</th>
+        <th>Check-In Date</th>
+        <th>Check-Out Date</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="reservation : ${reservations}">
+        <td th:text="${reservation.id}"></td>
+        <td th:text="${reservation.guestName}"></td>
+        <td th:text="${reservation.checkInDate}"></td>
+        <td th:text="${reservation.checkOutDate}"></td>
+        <td th:text="${reservation.roomId}"></td>
+        <td>
+            <form th:action="@{/reservations/cancel}" method="post">
+                <input type="hidden" name="reservationId" th:value="${reservation.id}">
+                <button type="submit">Cancel</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/reservations/search">Back to Search</a>
+
+
+
+</body>
+<footer style="margin-top: 20px; text-align: center;">
+    <p>Find us on GitHub:
+        <a href="https://github.com/dsfgdfsdf" target="_blank" style="text-decoration: none; color: blue;">Made Mukola Barda 405 Group</a>
+    </p>
+</footer>
+</html>

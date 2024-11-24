@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation Form</title>
+    <link rel="icon" type="image/png" href="/favicon-16x16.png">
+    <img src="/images/logo.png" alt="Hotel Logo" style="width: 150px; height: auto;">
+    <link rel="stylesheet" href="/Styles/styles.css">
+</head>
+<body>
+<h1>Book a Room</h1>
+
+<div class="message"
+     th:classappend="${messageType}"
+     th:text="${message}"
+     id="messageBox"></div>
+
+<form th:action="@{/reservations/book(roomId=${roomId})}" th:object="${reservation}" method="post">
+    <label for="guestName">Guest Name:</label>
+    <input type="text" id="guestName" name="guestName" th:field="*{guestName}" required>
+
+    <label for="checkInDate">Check-In Date:</label>
+    <input type="date" id="checkInDate" name="checkInDate" th:field="*{checkInDate}" required>
+
+    <label for="checkOutDate">Check-Out Date:</label>
+    <input type="date" id="checkOutDate" name="checkOutDate" th:field="*{checkOutDate}" required>
+
+    <button type="submit">Reserve</button>
+</form>
+<a href="/rooms">Back to Room List</a>
+</body>
+<footer style="margin-top: 20px; text-align: center;">
+    <p>Find us on GitHub:
+        <a href="https://github.com/dsfgdfsdf" target="_blank" style="text-decoration: none; color: blue;">Made Mukola Barda 405 Group</a>
+    </p>
+</footer>
+</html>
