@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html xmlns:th="http://www.thymeleaf.org">
+        <head>
+        <meta charset="UTF-8">
+        <title>Hotels</title>
+    <link rel="stylesheet" href="/Styles/styles.css">
+</head>
+<body>
+<h1>Hotels</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="hotel : ${hotels}">
+        <td th:text="${hotel.name}"></td>
+        <td th:text="${hotel.address}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>
