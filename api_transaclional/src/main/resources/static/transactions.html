@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Транзакції</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="transactions-container">
+    <h2>Історія транзакцій</h2>
+    <label>Початкова дата: <input type="date" id="startDate"></label>
+    <label>Кінцева дата: <input type="date" id="endDate"></label>
+    <label>Тип:
+        <select id="type">
+            <option value="">Всі</option>
+            <option value="DEPOSIT">Депозит</option>
+            <option value="WITHDRAWAL">Зняття</option>
+        </select>
+    </label>
+    <button onclick="loadTransactions()">Фільтрувати</button>
+
+    <ul id="transactions-list"></ul>
+</div>
+<script src="script/script.js"></script>
+</body>
+<footer>
+    Developer Petrenko Oleksandr | 405 Group
+</footer>
+</html>
